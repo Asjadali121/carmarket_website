@@ -8,6 +8,8 @@ from django.contrib.auth import get_user_model
 from apps.cars.models import Category, CarType, CarClass, Tag, Car
 from apps.orders.models import Order
 from apps.wishlist.models import Wishlist
+from django.core.management.base import BaseCommand
+from decimal import Decimal
 
 User = get_user_model()
 
@@ -489,8 +491,7 @@ class Command(BaseCommand):
                     buyer_phone='+92300' + str(1000000 + i),
                     notes='Sample order',
                     down_payment=car.price * 20 / 100 if i % 3 != 0 else None,
-                   from decimal import Decimal
-                    monthly_installment = car.price * Decimal("0.04") if i % 3 != 0 else None
+                    monthly_installment=car.price * 0.04 if i % 3 != 0 else None,
                     interest_rate=12 if i % 3 != 0 else None,
                     duration_months=24 if i % 3 != 0 else None,
                 )
