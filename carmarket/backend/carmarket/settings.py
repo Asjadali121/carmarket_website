@@ -138,3 +138,7 @@ CORS_ALLOW_HEADERS = [
     'accept', 'accept-encoding', 'authorization', 'content-type',
     'dnt', 'origin', 'user-agent', 'x-csrftoken', 'x-requested-with',
 ]
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.railway.app",
+    "https://carmarket-production-a5a2.up.railway.app",
+]
