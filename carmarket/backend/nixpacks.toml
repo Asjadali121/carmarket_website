@@ -13,6 +13,5 @@ cmds = [
   "python manage.py collectstatic --no-input"
 ]
 
-
 [start]
-cmd = "sh -c 'python manage.py migrate --no-input && exec gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT'"
+cmd = "python manage.py migrate --no-input; python manage.py showmigrations; gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT"
