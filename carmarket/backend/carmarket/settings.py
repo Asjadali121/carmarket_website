@@ -142,3 +142,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.railway.app",
     "https://carmarket-production-a5a2.up.railway.app",
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://carmarket-website.vercel.app",
+]
