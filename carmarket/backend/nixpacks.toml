@@ -14,4 +14,4 @@ cmds = [
 ]
 
 [start]
-cmd = "python manage.py migrate --no-input; python manage.py showmigrations; gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT"
+cmd = "gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT"
