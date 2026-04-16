@@ -64,6 +64,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'carmarket.wsgi.application'
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
+print("DATABASE:", DATABASES)
+print("DATABASE_url:", DATABASE_URL)
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL'),
