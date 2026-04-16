@@ -14,4 +14,4 @@ cmds = [
 ]
 
 [start]
-cmd = "gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
+cmd = "python manage.py migrate --no-input && gunicorn carmarket.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120"
