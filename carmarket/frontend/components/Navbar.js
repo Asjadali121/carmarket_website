@@ -51,7 +51,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
             {navLink('/cars', 'Browse Cars')}
-            {navLink('/cars?fuel_type=electric', 'Electric')}
+            {navLink('/cars?category__name=Electric', 'Electric')}
             {navLink('/cars?category__slug=luxury', 'Luxury')}
             {isAuthenticated && user?.role === 'seller' && navLink('/dashboard/seller', 'My Listings')}
             {isAuthenticated && (user?.role === 'admin' || user?.is_staff) && navLink('/admin', 'Admin')}
